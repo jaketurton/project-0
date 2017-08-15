@@ -5,6 +5,24 @@ import Player from './Player.jsx'
 export default class Scoreboard extends React.Component {
   constructor() {
     super();
+
+    this.state = {players: [
+        {
+            name: "Jake Turton",
+            score: 69,
+            key: 1,
+        },
+        {
+            name: "Sharron Walker",
+            score: 0,
+            key: 2,
+        },
+        {
+            name: "Jay Bee",
+            score: 2,
+            key: 3,
+        },
+    ]};
   }
 
   render() {
@@ -13,8 +31,9 @@ export default class Scoreboard extends React.Component {
         <Header title="My Scoreboard" />
 
         <div className="players">
-          <Player name="Jake Turton" score="31" />
-          <Player name="Sharron Walker" score="0" />
+          {this.state.players.map(function(player) {
+            return <Player name={player.name} score={player.score} key={player.key} />
+          })}
         </div>
         
       </div>
