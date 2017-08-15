@@ -2,16 +2,22 @@ import React from 'react';
 
 export default class Counter extends React.Component {
 
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
 
         this.state = {
-            score: '0',
+            score: 0,
         };
+
+        this.incrementScore = this.incrementScore.bind(this)
     };
 
-    incrementScore(e) {
-        console.log('incrementScore', e);
+   incrementScore(e) {
+        console.log(this.setState);
+        
+        this.setState({
+            score: (this.state.score + 1),
+        })
     }
 
     render() {
