@@ -10,7 +10,7 @@ export default function Player(props) {
         </div>
 
         <div className="player-score">
-            <Counter score={props.score} />
+            <Counter />
         </div>
     </div>
   );
