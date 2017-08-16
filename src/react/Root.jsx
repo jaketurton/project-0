@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header.jsx'
 import Player from './Player.jsx'
+import AddPlayer from './AddPlayerForm.jsx'
 
 export default class Scoreboard extends React.Component {
   constructor() {
@@ -53,6 +54,8 @@ export default class Scoreboard extends React.Component {
               key={player.id} />
           }.bind(this))}
         </div>
+
+        <AddPlayer />
         
       </div>
     );
