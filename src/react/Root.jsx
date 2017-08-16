@@ -5,35 +5,53 @@ import Player from './Player.jsx'
 export default class Scoreboard extends React.Component {
   constructor() {
     super();
+    
+    // create the initial state
+    this.state = {
+      title: "Scoreboard",
 
-    this.state = {players: [
+      players: [
         {
             name: "Jake Turton",
             score: 69,
-            key: 1,
+            id: 1,
         },
         {
             name: "Sharron Walker",
             score: 0,
-            key: 2,
+            id: 2,
         },
         {
             name: "Jay Bee",
             score: 2,
-            key: 3,
+            id: 3,  
         },
     ]};
+
+    // allow onScoreChange to be used within render()
+    this.onScoreChange = this.onScoreChange.bind(this);
+
+  }
+
+  onScoreChange(index, delta) {
+    console.log('onScoreChange', index, delta);
+    this.state.players[index].score += delta;
+    this.setState(this.state);
   }
 
   render() {
     return (
       <div className="scoreboard">
-        <Header title="My Scoreboard" />
+        <Header title={this.state.title} />
 
         <div className="players">
-          {this.state.players.map(function(player) {
-            return <Player name={player.name} score={player.score} key={player.key} />
-          })}
+          {this.state.players.map(function(player, index) {
+            return <Player
+              onScoreChange={function(delta) {this.onScoreChange(index, delta)}.bind(this)}
+              name={player.name} 
+              score={player.score} 
+              key={player.id} />
+          }.bind(this))}
         </div>
         
       </div>

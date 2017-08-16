@@ -1,40 +1,49 @@
 import React from 'react';
 
-export default class Counter extends React.Component {
+export default function Counter(props) {
+    return (
+        <div className="counter">
+            <button className="counter-action decrement" onClick={function() {props.onChange(-1)}}> - </button>
+            <div className="counter-score"> {props.score} </div>
+            <button className="counter-action increment" onClick={function() {props.onChange(1)}}> + </button>
+        </div>
+    )
+}
 
-    constructor(props) {
-        super(props);
+// export default class Counter extends React.Component {
+//     constructor(props) {
+//         super(props);
 
-        this.state = {
-            score: 0,
-        };
+//         this.state = {
+//             score: 0,
+//         };
 
-        this.incrementScore = this.incrementScore.bind(this);
-        this.decrementScore = this.decrementScore.bind(this);
-    };
+//         this.incrementScore = this.incrementScore.bind(this);
+//         this.decrementScore = this.decrementScore.bind(this);
+//     };
 
-    incrementScore(e) {
-        this.setState({
-            score: (this.state.score + 1),
-        })
-    }
+//     incrementScore(e) {
+//         this.setState({
+//             score: (this.state.score + 1),
+//         })
+//     }
 
-    decrementScore(e) {
-        this.setState({
-            score: (this.state.score - 1),
-        })
-    }
+//     decrementScore(e) {
+//         this.setState({
+//             score: (this.state.score - 1),
+//         })
+//     }
 
-    render() {
-        return (
-            <div className="counter">
-                <button className="counter-action decrement" onClick={this.decrementScore}> - </button>
-                <div className="counter-score"> {this.state.score} </div>
-                <button className="counter-action increment" onClick={this.incrementScore}> + </button>
-            </div>
-        )
-    }
-};
+//     render() {
+//         return (
+//             <div className="counter">
+//                 <button className="counter-action decrement" onClick={this.decrementScore}> - </button>
+//                 <div className="counter-score"> {this.state.score} </div>
+//                 <button className="counter-action increment" onClick={this.incrementScore}> + </button>
+//             </div>
+//         )
+//     }
+// };
 
 // Functional component (sans-state)
 
