@@ -42,7 +42,7 @@ export default class Scoreboard extends React.Component {
   render() {
     return (
       <div className="scoreboard">
-        <Header title={this.state.title} />
+        <Header title={this.state.title} players={this.state.players} />
 
         <div className="players">
           {this.state.players.map(function(player, index) {
