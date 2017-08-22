@@ -32,9 +32,10 @@ export default class Scoreboard extends React.Component {
       nextId: 4,
     };
 
-    // allow onScoreChange to be used within render()
+    // give these functions a 'this' reference to Scoreboard class
     this.onScoreChange = this.onScoreChange.bind(this);
     this.onPlayerAdd = this.onPlayerAdd.bind(this);
+    this.onRemovePlayer = this.onRemovePlayer.bind(this);
   }
 
   onScoreChange(index, delta) {
@@ -54,6 +55,12 @@ export default class Scoreboard extends React.Component {
     nextId += 1;
   }
 
+  onRemovePlayer(index) {
+    this.state.players.splice(index, 1);
+    this.setState(this.state);
+    console.log('remove:', index);
+  }
+
   render() {
     return (
       <div className="scoreboard">
@@ -63,6 +70,7 @@ export default class Scoreboard extends React.Component {
           {this.state.players.map(function(player, index) {
             return <Player
               onScoreChange={function(delta) {this.onScoreChange(index, delta)}.bind(this)}
+              onRemove={function() {this.onRemovePlayer(index)}.bind(this)}
               name={player.name} 
               score={player.score} 
               key={player.id} />
