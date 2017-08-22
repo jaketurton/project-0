@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "1762f91525a79632d1fe"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "86c5bd4a0d98a69b1daf"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -23436,7 +23436,11 @@ function Player(props) {
         _react2.default.createElement(
             'div',
             { className: 'player-name' },
-            _react2.default.createElement('a', { className: 'remove-player', onClick: props.onRemove }),
+            _react2.default.createElement(
+                'a',
+                { className: 'remove-player', onClick: props.onRemove },
+                '\u2716'
+            ),
             props.name
         ),
         _react2.default.createElement(
