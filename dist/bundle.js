@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "3ca37d850d00a240433b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "1762f91525a79632d1fe"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -1206,7 +1206,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 var _prodInvariant = __webpack_require__(3);
 
-var DOMProperty = __webpack_require__(13);
+var DOMProperty = __webpack_require__(14);
 var ReactDOMComponentFlags = __webpack_require__(57);
 
 var invariant = __webpack_require__(1);
@@ -2456,6 +2456,16 @@ function getPooledWarningPropertyDefinition(propName, getVal) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+module.exports = __webpack_require__(17);
+
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -2665,16 +2675,6 @@ var DOMProperty = {
 
 module.exports = DOMProperty;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = __webpack_require__(17);
-
 
 /***/ }),
 /* 15 */
@@ -8645,7 +8645,7 @@ module.exports = CSSProperty;
 
 
 
-var DOMProperty = __webpack_require__(13);
+var DOMProperty = __webpack_require__(14);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInstrumentation = __webpack_require__(8);
 
@@ -9844,7 +9844,7 @@ module.exports = getActiveElement;
 var _prodInvariant = __webpack_require__(3);
 
 var DOMLazyTree = __webpack_require__(20);
-var DOMProperty = __webpack_require__(13);
+var DOMProperty = __webpack_require__(14);
 var React = __webpack_require__(17);
 var ReactBrowserEventEmitter = __webpack_require__(32);
 var ReactCurrentOwner = __webpack_require__(10);
@@ -10409,7 +10409,7 @@ module.exports = getHostComponentFromComposite;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
@@ -14932,7 +14932,7 @@ module.exports = EnterLeaveEventPlugin;
 
 
 
-var DOMProperty = __webpack_require__(13);
+var DOMProperty = __webpack_require__(14);
 
 var MUST_USE_PROPERTY = DOMProperty.injection.MUST_USE_PROPERTY;
 var HAS_BOOLEAN_VALUE = DOMProperty.injection.HAS_BOOLEAN_VALUE;
@@ -15629,7 +15629,7 @@ var AutoFocusUtils = __webpack_require__(124);
 var CSSPropertyOperations = __webpack_require__(125);
 var DOMLazyTree = __webpack_require__(20);
 var DOMNamespaces = __webpack_require__(40);
-var DOMProperty = __webpack_require__(13);
+var DOMProperty = __webpack_require__(14);
 var DOMPropertyOperations = __webpack_require__(69);
 var EventPluginHub = __webpack_require__(22);
 var EventPluginRegistry = __webpack_require__(27);
@@ -20644,7 +20644,7 @@ module.exports = getUnboundedScrollPosition;
 
 
 
-var DOMProperty = __webpack_require__(13);
+var DOMProperty = __webpack_require__(14);
 var EventPluginHub = __webpack_require__(22);
 var EventPluginUtils = __webpack_require__(34);
 var ReactComponentEnvironment = __webpack_require__(43);
@@ -22798,7 +22798,7 @@ module.exports = ReactMount.renderSubtreeIntoContainer;
 
 
 
-var DOMProperty = __webpack_require__(13);
+var DOMProperty = __webpack_require__(14);
 var EventPluginRegistry = __webpack_require__(27);
 var ReactComponentTreeHook = __webpack_require__(7);
 
@@ -22965,7 +22965,7 @@ module.exports = ReactDOMNullInputValuePropHook;
 
 
 
-var DOMProperty = __webpack_require__(13);
+var DOMProperty = __webpack_require__(14);
 var ReactComponentTreeHook = __webpack_require__(7);
 
 var warning = __webpack_require__(2);
@@ -23060,7 +23060,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(14);
+var _react = __webpack_require__(13);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -23068,11 +23068,11 @@ var _Header = __webpack_require__(185);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Player = __webpack_require__(187);
+var _Player = __webpack_require__(188);
 
 var _Player2 = _interopRequireDefault(_Player);
 
-var _AddPlayerForm = __webpack_require__(189);
+var _AddPlayerForm = __webpack_require__(190);
 
 var _AddPlayerForm2 = _interopRequireDefault(_AddPlayerForm);
 
@@ -23108,18 +23108,39 @@ var Scoreboard = function (_React$Component) {
         name: "Jay Bee",
         score: 2,
         id: 3
-      }] };
+      }],
 
-    // allow onScoreChange to be used within render()
+      nextId: 4
+    };
+
+    // give these functions a 'this' reference to Scoreboard class
     _this.onScoreChange = _this.onScoreChange.bind(_this);
+    _this.onPlayerAdd = _this.onPlayerAdd.bind(_this);
+    _this.onRemovePlayer = _this.onRemovePlayer.bind(_this);
     return _this;
   }
 
   _createClass(Scoreboard, [{
     key: 'onScoreChange',
     value: function onScoreChange(index, delta) {
-      console.log('onScoreChange', index, delta);
       this.state.players[index].score += delta;
+      this.setState(this.state);
+    }
+  }, {
+    key: 'onPlayerAdd',
+    value: function onPlayerAdd(name) {
+      this.state.players.push({
+        name: name,
+        score: 0,
+        id: this.nextId
+      });
+      this.setState(this.state);
+      this.state.nextId += 1;
+    }
+  }, {
+    key: 'onRemovePlayer',
+    value: function onRemovePlayer(index) {
+      this.state.players.splice(index, 1);
       this.setState(this.state);
     }
   }, {
@@ -23137,12 +23158,15 @@ var Scoreboard = function (_React$Component) {
               onScoreChange: function (delta) {
                 this.onScoreChange(index, delta);
               }.bind(this),
+              onRemove: function () {
+                this.onRemovePlayer(index);
+              }.bind(this),
               name: player.name,
               score: player.score,
               key: player.id });
           }.bind(this))
         ),
-        _react2.default.createElement(_AddPlayerForm2.default, null)
+        _react2.default.createElement(_AddPlayerForm2.default, { onAdd: this.onPlayerAdd })
       );
     }
   }]);
@@ -23164,13 +23188,17 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = Header;
 
-var _react = __webpack_require__(14);
+var _react = __webpack_require__(13);
 
 var _react2 = _interopRequireDefault(_react);
 
 var _Stats = __webpack_require__(186);
 
 var _Stats2 = _interopRequireDefault(_Stats);
+
+var _Stopwatch = __webpack_require__(187);
+
+var _Stopwatch2 = _interopRequireDefault(_Stopwatch);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23183,7 +23211,8 @@ function Header(props) {
       'h1',
       null,
       props.title
-    )
+    ),
+    _react2.default.createElement(_Stopwatch2.default, null)
   );
 }
 
@@ -23199,7 +23228,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = Stats;
 
-var _react = __webpack_require__(14);
+var _react = __webpack_require__(13);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -23257,15 +23286,143 @@ function Stats(props) {
 
 
 Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(13);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Stopwatch = function (_React$Component) {
+  _inherits(Stopwatch, _React$Component);
+
+  function Stopwatch() {
+    _classCallCheck(this, Stopwatch);
+
+    var _this = _possibleConstructorReturn(this, (Stopwatch.__proto__ || Object.getPrototypeOf(Stopwatch)).call(this));
+
+    _this.state = {
+      running: false,
+      elapsedTime: 0,
+      previousTime: 0
+    };
+
+    _this.onStart = _this.onStart.bind(_this);
+    _this.onStop = _this.onStop.bind(_this);
+    _this.onReset = _this.onReset.bind(_this);
+    _this.onTick = _this.onTick.bind(_this);
+    return _this;
+  }
+
+  _createClass(Stopwatch, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.interval = setInterval(this.onTick, 100);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      clearInterval(this.interval);
+    }
+  }, {
+    key: "onTick",
+    value: function onTick() {
+      if (this.state.running) {
+        var now = Date.now();
+        this.setState({
+          previousTime: now,
+          elapsedTime: this.state.elapsedTime + (now - this.state.previousTime)
+        });
+      }
+    }
+  }, {
+    key: "onStart",
+    value: function onStart() {
+      this.setState({
+        running: true,
+        previousTime: Date.now()
+      });
+    }
+  }, {
+    key: "onStop",
+    value: function onStop() {
+      this.setState({ running: false });
+    }
+  }, {
+    key: "onReset",
+    value: function onReset() {
+      this.setState({
+        elapsedTime: 0,
+        previousTime: Date.now()
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var seconds = Math.floor(this.state.elapsedTime / 1000);
+      return _react2.default.createElement(
+        "div",
+        { className: "stopwatch" },
+        _react2.default.createElement(
+          "h2",
+          null,
+          "Stopwatch"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "stopwatch-time" },
+          seconds
+        ),
+        this.state.running ? _react2.default.createElement(
+          "button",
+          { onClick: this.onStop },
+          "Stop"
+        ) : _react2.default.createElement(
+          "button",
+          { onClick: this.onStart },
+          "Start"
+        ),
+        _react2.default.createElement(
+          "button",
+          { onClick: this.onReset },
+          "Reset"
+        )
+      );
+    }
+  }]);
+
+  return Stopwatch;
+}(_react2.default.Component);
+
+exports.default = Stopwatch;
+
+/***/ }),
+/* 188 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = Player;
 
-var _react = __webpack_require__(14);
+var _react = __webpack_require__(13);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Counter = __webpack_require__(188);
+var _Counter = __webpack_require__(189);
 
 var _Counter2 = _interopRequireDefault(_Counter);
 
@@ -23279,6 +23436,7 @@ function Player(props) {
         _react2.default.createElement(
             'div',
             { className: 'player-name' },
+            _react2.default.createElement('a', { className: 'remove-player', onClick: props.onRemove }),
             props.name
         ),
         _react2.default.createElement(
@@ -23290,7 +23448,7 @@ function Player(props) {
 }
 
 /***/ }),
-/* 188 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23301,7 +23459,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = Counter;
 
-var _react = __webpack_require__(14);
+var _react = __webpack_require__(13);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -23384,7 +23542,7 @@ function Counter(props) {
 // }
 
 /***/ }),
-/* 189 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23396,7 +23554,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(14);
+var _react = __webpack_require__(13);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -23419,30 +23577,35 @@ var AddPlayerForm = function (_React$Component) {
     _this.state = {
       name: ""
     };
+
+    _this.onNameChange = _this.onNameChange.bind(_this);
+    _this.onSubmit = _this.onSubmit.bind(_this);
     return _this;
   }
 
   _createClass(AddPlayerForm, [{
-    key: 'onNameChange',
+    key: "onNameChange",
     value: function onNameChange(e) {
-      console.log('onNameChange', e.target.value);
+      this.setState({ name: e.target.value });
     }
   }, {
-    key: 'onSubmit',
+    key: "onSubmit",
     value: function onSubmit(e) {
       e.preventDefault();
+      this.props.onAdd(this.state.name);
+      this.setState({ name: "" });
     }
   }, {
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { className: 'add-player-form' },
+        "div",
+        { className: "add-player-form" },
         _react2.default.createElement(
-          'form',
+          "form",
           { onSubmit: this.onSubmit },
-          _react2.default.createElement('input', { type: 'text', value: this.state.name, onChange: this.onNameChange }),
-          _react2.default.createElement('input', { type: 'submit', value: 'Add Player' })
+          _react2.default.createElement("input", { type: "text", value: this.state.name, onChange: this.onNameChange }),
+          _react2.default.createElement("input", { type: "submit", value: "Add Player" })
         )
       );
     }

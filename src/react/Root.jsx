@@ -39,26 +39,23 @@ export default class Scoreboard extends React.Component {
   }
 
   onScoreChange(index, delta) {
-    console.log('onScoreChange', index, delta);
     this.state.players[index].score += delta;
     this.setState(this.state);
   }
 
   onPlayerAdd(name) {
-    console.log("Player added:", name);
     this.state.players.push({
       name: name,
       score: 0,
       id: this.nextId,
     })
     this.setState(this.state);
-    nextId += 1;
+    this.state.nextId += 1;
   }
 
   onRemovePlayer(index) {
     this.state.players.splice(index, 1);
     this.setState(this.state);
-    console.log('remove:', index);
   }
 
   render() {

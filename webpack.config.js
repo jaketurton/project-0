@@ -10,7 +10,7 @@ module.exports = {
 
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "docs")
+    path: path.resolve(__dirname, "dist")
   },
 
   module: {
@@ -34,7 +34,7 @@ module.exports = {
 
   devServer: {
     hot: true, // Tell the dev-server we're using HMR
-    contentBase: path.resolve(__dirname, "docs"),
+    contentBase: path.resolve(__dirname, "dist"),
     publicPath: "/"
   },
 
