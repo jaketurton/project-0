@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header.jsx'
 import Player from './Player.jsx'
-import AddPlayer from './AddPlayerForm.jsx'
+import AddPlayerForm from './AddPlayerForm.jsx'
 
 export default class Scoreboard extends React.Component {
   constructor() {
@@ -27,17 +27,31 @@ export default class Scoreboard extends React.Component {
             score: 2,
             id: 3,  
         },
-    ]};
+      ],
+
+      nextId: 4,
+    };
 
     // allow onScoreChange to be used within render()
     this.onScoreChange = this.onScoreChange.bind(this);
-
+    this.onPlayerAdd = this.onPlayerAdd.bind(this);
   }
 
   onScoreChange(index, delta) {
     console.log('onScoreChange', index, delta);
     this.state.players[index].score += delta;
     this.setState(this.state);
+  }
+
+  onPlayerAdd(name) {
+    console.log("Player added:", name);
+    this.state.players.push({
+      name: name,
+      score: 0,
+      id: this.nextId,
+    })
+    this.setState(this.state);
+    nextId += 1;
   }
 
   render() {
@@ -55,7 +69,7 @@ export default class Scoreboard extends React.Component {
           }.bind(this))}
         </div>
 
-        <AddPlayer />
+        <AddPlayerForm onAdd={this.onPlayerAdd} />
         
       </div>
     );
