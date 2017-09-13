@@ -55,7 +55,7 @@ export default class Scoreboard extends React.Component {
           }.bind(this))}
         </div>
 
-        <AddPlayer />
+        <AddPlayer onAdd={this.onPlayerAdd} />
         
       </div>
     );

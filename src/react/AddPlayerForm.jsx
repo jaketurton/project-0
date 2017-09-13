@@ -7,14 +7,24 @@ export default class AddPlayerForm extends React.Component {
     this.state = {
       name: "",
     };
+
+    this.onNameChange = this.onNameChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+    this.onPlayerAdd = this.onPlayerAdd.bind(this);
   }
 
   onNameChange(e) {
-    console.log('onNameChange', e.target.value)
+    this.setState({name: e.target.value});
   }
 
   onSubmit(e) {
     e.preventDefault();
+    this.props.onAdd(this.state.name);
+    this.setState({name: ""});
+  }
+
+  onPlayerAdd(name){
+    console.log("Player added:", name);
   }
 
   render(){
